@@ -1,17 +1,9 @@
-// const connection = require('./init.js')
+const connection = require('../db/connect.js')
 const moment = require('moment')
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'blog'
-});
-
-
 exports.getArticleList = () => {
 	return new Promise((resolve, reject) => {
-		connection.query('select * from article left join user on article.uid = user.id order by article.utime', (err, res, fields) => {
+		let query = 'select * from article left join user on article.uid = user.id order by article.utime'
+		connection.query(query, (err, res, fields) => {
 			if (err){
 				reject(err)
 				return 
