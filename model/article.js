@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 
 exports.getArticleList = () => {
 	return new Promise((resolve, reject) => {
-		connection.query('select * from article', (err, res, fields) => {
+		connection.query('select * from article left join user on article.uid = user.id order by article.utime', (err, res, fields) => {
 			if (err){
 				reject(err)
 				return 

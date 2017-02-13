@@ -5,13 +5,16 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>文章列表</h1>
+    <h1><%= title %></h1>
     <div>
     	<% articles.forEach(function(article){ %>
 		 	<div class="m-article">
 				<p class="title"><%= article.title %></p>
 				<p class="content"><%= article.content %></p>
-				<p class="content"><%= article.utime %></p>
+				<p class="content">更新时间：<%= article.utime %></p>
+				<% if(article.uid){ %>
+				<p class="content">作者：<%= article.name %></p>
+				<% } %>
 		 	</div>   
 		<% }); %>
     </div>
