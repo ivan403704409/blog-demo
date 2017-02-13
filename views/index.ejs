@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>文章列表</h1>
+    <div>
+    	<% articles.forEach(function(article){ %>
+		 	<div class="m-article">
+				<p class="title"><%= article.title %></p>
+				<p class="content"><%= article.content %></p>
+				<p class="content"><%= article.utime %></p>
+		 	</div>   
+		<% }); %>
+    </div>
+  </body>
+</html>

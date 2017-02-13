@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.m-article{
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	background: #f5f5f5;
+	cursor: pointer;
+}
+.m-article:hover{
+	background-color: #eee;
+}
+
+.m-article .title{
+	font-size: 18px;
+}
+.m-article .content{
+	color: #949494;
+}
